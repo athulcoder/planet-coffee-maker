@@ -18,7 +18,101 @@
     />
   </head>
   <body class="opening hide-UI view-2D zoom-large data-close controls-close">
-    <div id="js-p-box"></div>
+    <div id="js-p-box">
+      <style>
+        @keyframes shimmer {
+          0% {
+            background-position: -400px 0;
+          }
+          100% {
+            background-position: 400px 0;
+          }
+        }
+
+        .shimmer {
+          background: linear-gradient(
+            to right,
+            rgba(80, 80, 80, 0.2) 0%,
+            rgba(150, 150, 150, 0.3) 20%,
+            rgba(80, 80, 80, 0.2) 40%,
+            rgba(80, 80, 80, 0.2) 100%
+          );
+          background-size: 800px 100%;
+          animation: shimmer 1.5s infinite linear;
+          border-radius: 4px;
+        }
+      </style>
+
+      <div
+        id="planetInfo"
+        style="
+          width: 320px;
+          height: 320px;
+          background: rgba(30, 30, 30, 0.8);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          border-radius: 18px;
+          padding: 20px;
+          margin: 10px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        "
+      >
+        <!-- Name placeholder -->
+        <div
+          class="shimmer"
+          style="height: 28px; width: 160px; margin: 0 auto 14px auto"
+        ></div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 14px;
+            column-gap: 12px;
+            flex: 1;
+            align-items: center;
+          "
+        >
+          <div class="shimmer" style="height: 16px; width: 100px"></div>
+          <div
+            class="shimmer"
+            style="height: 16px; width: 60px; margin-left: auto"
+          ></div>
+
+          <div class="shimmer" style="height: 16px; width: 100px"></div>
+          <div
+            class="shimmer"
+            style="height: 16px; width: 60px; margin-left: auto"
+          ></div>
+
+          <div class="shimmer" style="height: 16px; width: 100px"></div>
+          <div
+            class="shimmer"
+            style="height: 16px; width: 90px; margin-left: auto"
+          ></div>
+
+          <div class="shimmer" style="height: 16px; width: 100px"></div>
+          <div
+            class="shimmer"
+            style="height: 16px; width: 70px; margin-left: auto"
+          ></div>
+
+          <div class="shimmer" style="height: 16px; width: 140px"></div>
+          <div
+            class="shimmer"
+            style="height: 16px; width: 80px; margin-left: auto"
+          ></div>
+        </div>
+      </div>
+    </div>
 
     <div id="navbar">
       <a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>

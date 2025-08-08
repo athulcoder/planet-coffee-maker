@@ -111,93 +111,109 @@ document.querySelector("#neptune").addEventListener("click", async (e) => {
 function createBox(p) {
   let html = `
   <div
-      id="planetInfo"
-      style="
-        width: 300px;
-        height: 300px;
-        background-color: #e1dbdbe4;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        border-radius: 16px;
-        padding: 20px;
-        margin: 10px;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', sans-serif;
-        color: #222;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      "
-    >
-      <h2
-        id="planetName"
-        style="
-          margin: 0 0 10px 0;
-          font-size: 22px;
-          text-align: center;
-          color: #b3541e;
-        "
-      > ${p.name}</h2>
+  id="planetInfo"
+  style="
+    width: 320px;
+    height: 320px;
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 18px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  "
+>
+  <h2
+    id="planetName"
+    style="
+      margin: 0 0 14px 0;
+      font-size: 24px;
+      text-align: center;
+      color: #ff884d;
+      letter-spacing: 1px;
+    "
+  >
+    ${p.name}
+  </h2>
 
-      <div
-        class="planet-details"
-        style="
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          row-gap: 8px;
-          column-gap: 12px;
-          flex: 1;
-        "
-      >
-        <div class="label" style="font-weight: 600; opacity: 0.8">
-          Temperature (K):
-        </div>
-        <div class="value" id="tempK" style="text-align: right; opacity: 0.95">
-          ${p.temperatureK}
-        </div>
-
-        <div class="label" style="font-weight: 600; opacity: 0.8">
-          Gravity (m/s²):
-        </div>
-        <div
-          class="value"
-          id="gravity"
-          style="text-align: right; opacity: 0.95"
-        >
-          ${p.gravity}
-        </div>
-
-        <div class="label" style="font-weight: 600; opacity: 0.8">
-          Mass (kg):
-        </div>
-        <div class="value" id="massKg" style="text-align: right; opacity: 0.95">
-          ${p.massKg}
-        </div>
-
-        <div class="label" style="font-weight: 600; opacity: 0.8">
-          Radius (km):
-        </div>
-        <div
-          class="value"
-          id="radiusKm"
-          style="text-align: right; opacity: 0.95"
-        >
-          ${p.radiusKm}
-        </div>
-
-        <div class="label" style="font-weight: 600; opacity: 0.8">
-          Orbital Period (days):
-        </div>
-        <div
-          class="value"
-          id="orbitalPeriod"
-          style="text-align: right; opacity: 0.95"
-        >
-          ${p.orbitalPeriodDays}
-        </div>
-      </div>
+  <div
+    class="planet-details"
+    style="
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10px;
+      column-gap: 12px;
+      flex: 1;
+    "
+  >
+    <div class="label" style="font-weight: 600; opacity: 0.75; color: #bbb;">
+      Temperature (K):
     </div>
+    <div
+      class="value"
+      id="tempK"
+      style="text-align: right; opacity: 0.95; color: #fff;"
+    >
+      ${p.temperatureK}
+    </div>
+
+    <div class="label" style="font-weight: 600; opacity: 0.75; color: #bbb;">
+      Gravity (m/s²):
+    </div>
+    <div
+      class="value"
+      id="gravity"
+      style="text-align: right; opacity: 0.95; color: #fff;"
+    >
+      ${p.gravity}
+    </div>
+
+    <div class="label" style="font-weight: 600; opacity: 0.75; color: #bbb;">
+      Mass (kg):
+    </div>
+    <div
+      class="value"
+      id="massKg"
+      style="text-align: right; opacity: 0.95; color: #fff;"
+    >
+      ${p.massKg}
+    </div>
+
+    <div class="label" style="font-weight: 600; opacity: 0.75; color: #bbb;">
+      Radius (km):
+    </div>
+    <div
+      class="value"
+      id="radiusKm"
+      style="text-align: right; opacity: 0.95; color: #fff;"
+    >
+      ${p.radiusKm}
+    </div>
+
+    <div class="label" style="font-weight: 600; opacity: 0.75; color: #bbb;">
+      Orbital Period (days):
+    </div>
+    <div
+      class="value"
+      id="orbitalPeriod"
+      style="text-align: right; opacity: 0.95; color: #fff;"
+    >
+      ${p.orbitalPeriodDays}
+    </div>
+  </div>
+</div>
+
 
   `;
   document.getElementById("js-p-box").innerHTML = html;
