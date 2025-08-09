@@ -265,6 +265,64 @@ setInterval(async () => {
     "temp"
   ).innerHTML = ` Temperature:  ${data.temperature} °C`;
   document.getElementById("hum").innerHTML = ` Humidity: ${data.humidity} %`;
+
+  if (data.temperature > 35) {
+    let p = await getPlanet("mercury");
+    const res = await fetch("/scripts/data/fun_facts.json");
+    const data = await res.json();
+    const planet = data.mercury;
+    makeFact(planet);
+    createBox(p);
+  } else if (data.temperature > 33) {
+    let p = await getPlanet("venus");
+    const res = await fetch("/scripts/data/fun_facts.json");
+    const data = await res.json();
+    const planet = data.venus;
+    makeFact(planet);
+    createBox(p);
+  } else if (data.temperature > 30) {
+    let p = await getPlanet("earth");
+    const res = await fetch("/scripts/data/fun_facts.json");
+    const data = await res.json();
+    const planet = data.earth;
+    makeFact(planet);
+    createBox(p);
+  } else if (data.temperature > 27) {
+    let p = await getPlanet("mars");
+    const res = await fetch("/scripts/data/fun_facts.json");
+    const data = await res.json();
+    const planet = data.mars;
+    makeFact(planet);
+    createBox(p);
+  } else if (data.temperature > 25) {
+    let p = await getPlanet("jupiter");
+    const res = await fetch("/scripts/data/fun_facts.json");
+    const data = await res.json();
+    const planet = data.jupiter;
+    makeFact(planet);
+    createBox(p);
+  } else if (data.temperature > 23) {
+    let p = await getPlanet("saturn");
+    const res = await fetch("/scripts/data/fun_facts.json");
+    const data = await res.json();
+    const planet = data.saturn;
+    makeFact(planet);
+    createBox(p);
+  } else if (data.temperature > 21) {
+    let p = await getPlanet("uranus");
+    const res = await fetch("/scripts/data/fun_facts.json");
+    const data = await res.json();
+    const planet = data.uranus;
+    makeFact(planet);
+    createBox(p);
+  } else if (data.temperature > 19) {
+    let p = await getPlanet("neptune");
+    const res = await fetch("/scripts/data/fun_facts.json");
+    const data = await res.json();
+    const planet = data.neptune;
+    makeFact(planet);
+    createBox(p);
+  }
 }, 1000);
 
 // fetchTemperature();
