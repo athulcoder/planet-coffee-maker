@@ -253,27 +253,19 @@ function createBox(p) {
 
   `;
   document.getElementById("js-p-box").innerHTML = html;
-  console.log(html);
 }
 
 // HARDWARE
 
-// function sendPlanetToESP32(planetName) {
-//   // Replace with your ESP32 IP address on your local Wi-Fi network
-//   const esp32IP = "http://192.168.x.x";
+setInterval(async () => {
+  const res = await fetch("http://192.168.193.52/temperature");
+  const data = await res.json();
 
-//   fetch(`${esp32IP}/setPlanet?name=${planetName}`)
-//     .then((response) => response.text())
-//     .then((data) => {
-//       console.log("ESP32 response:", data);
-//       // You can update your webpage UI here with confirmation
-//       alert(data);
-//     })
-//     .catch((error) => {
-//       console.error("Error communicating with ESP32:", error);
-//       alert("Failed to send planet data to ESP32");
-//     });
-// }
+  document.getElementById(
+    "temp"
+  ).innerHTML = ` Temperature:  ${data.temperature} °C`;
+  document.getElementById("hum").innerHTML = ` Humidity: ${data.humidity} %`;
+}, 1000);
 
 // fetchTemperature();
 
