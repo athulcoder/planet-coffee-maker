@@ -1,5 +1,5 @@
 {
-  "Mercury": [
+  "mercury": [
     "Mercury is basically the solar system's hot potato.",
     "If Mercury were a person, it would never sleep because its days last longer than its years.",
     "Mercury is so small it could hide inside Jupiter's Great Red Spot and no one would notice.",
@@ -16,7 +16,7 @@
     "Its core takes up most of the planet — Mercury skipped leg day forever.",
     "You could watch the Sun rise, reverse, and set again in one Mercury day."
   ],
-  "Venus": [
+  "venus": [
     "Venus spins backwards, so the Sun rises in the west — it’s just being a rebel.",
     "It’s hotter than Mercury even though it’s farther from the Sun — pure overachiever.",
     "A day on Venus is longer than its year, so birthdays get confusing.",
@@ -33,7 +33,7 @@
     "Venus is basically Earth’s evil twin.",
     "If you ever visited, your last words might be 'why is it so hot in here?'"
   ],
-  "Earth": [
+  "earth": [
     "Earth is the only planet known to have pizza.",
     "70% of the planet is water, but humans still fight over drinking it.",
     "Earth’s core is hotter than the surface of the Sun — spicy center.",
@@ -50,7 +50,7 @@
     "Earth spins at about 1,600 km/h — but we don’t feel dizzy.",
     "Most of Earth’s fresh water is frozen in Antarctica."
   ],
-  "Mars": [
+  "mars": [
     "Mars is home to the tallest volcano in the solar system.",
     "It has two tiny moons that look like potatoes.",
     "Mars is basically a desert with a bad cold.",
@@ -67,7 +67,7 @@
     "It’s cold enough to freeze carbon dioxide into dry ice.",
     "Mars is the solar system’s rusty ball."
   ],
-  "Jupiter": [
+  "jupiter": [
     "Jupiter is so big it could fit all other planets inside it.",
     "It’s basically a failed star.",
     "Its Great Red Spot is a storm that’s older than telescopes.",
@@ -84,7 +84,7 @@
     "It’s a gas giant, so there’s nowhere to stand.",
     "Jupiter is basically the solar system’s bouncer."
   ],
-  "Saturn": [
+  "saturn": [
     "Saturn could float in a bathtub if the bathtub were big enough.",
     "Its rings are made of ice, dust, and bad decisions.",
     "Saturn has 83 moons and counting.",
@@ -101,7 +101,7 @@
     "Its rings move at different speeds — space traffic jam.",
     "Saturn’s magnetic field is weaker than Jupiter’s but still huge."
   ],
-  "Uranus": [
+  "uranus": [
     "Uranus spins on its side like it’s napping.",
     "Its name makes people giggle in every classroom.",
     "It’s a pale blue color thanks to methane.",
@@ -118,7 +118,7 @@
     "It was the first planet discovered with a telescope.",
     "Space probes have only visited it once."
   ],
-  "Neptune": [
+  "neptune": [
     "Neptune has the fastest winds in the solar system.",
     "It’s so far from the Sun that a year lasts 165 Earth years.",
     "It was discovered using math before it was seen.",

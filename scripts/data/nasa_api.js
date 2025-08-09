@@ -71,40 +71,76 @@ document.querySelector("#earth").addEventListener("click", async (e) => {
   console.log("Earth");
   let p = await getPlanet("earth");
 
+  const res = await fetch("/scripts/data/fun_facts.json");
+  const data = await res.json();
+
+  const planet = data.earth;
+  makeFact(planet);
   createBox(p);
 });
 
 document.querySelector("#mercury").addEventListener("click", async (e) => {
+  const res = await fetch("/scripts/data/fun_facts.json");
+  const data = await res.json();
+  const planet = data.mercury;
+  makeFact(planet);
   let p = await getPlanet("mercury");
   createBox(p);
 });
 
 document.querySelector("#venus").addEventListener("click", async (e) => {
   let p = await getPlanet("venus");
+  const res = await fetch("/scripts/data/fun_facts.json");
+  const data = await res.json();
+  const planet = data.venus;
+  makeFact(planet);
   createBox(p);
 });
 
 document.querySelector("#saturn").addEventListener("click", async (e) => {
   let p = await getPlanet("saturn");
+
+  const res = await fetch("/scripts/data/fun_facts.json");
+  const data = await res.json();
+  const planet = data.saturn;
+  makeFact(planet);
   createBox(p);
 });
 document.querySelector("#mars").addEventListener("click", async (e) => {
   let p = await getPlanet("mars");
+
+  const res = await fetch("/scripts/data/fun_facts.json");
+  const data = await res.json();
+  const planet = data.mars;
+  makeFact(planet);
   createBox(p);
 });
 
 document.querySelector("#jupiter").addEventListener("click", async (e) => {
   let p = await getPlanet("jupiter");
+
+  const res = await fetch("/scripts/data/fun_facts.json");
+  const data = await res.json();
+  const planet = data.jupiter;
+  makeFact(planet);
   createBox(p);
 });
 
 document.querySelector("#uranus").addEventListener("click", async (e) => {
   let p = await getPlanet("uranus");
+  const res = await fetch("/scripts/data/fun_facts.json");
+  const data = await res.json();
+  const planet = data.uranus;
+  makeFact(planet);
   createBox(p);
 });
 
 document.querySelector("#neptune").addEventListener("click", async (e) => {
   let p = await getPlanet("neptune");
+  const res = await fetch("/scripts/data/fun_facts.json");
+  const data = await res.json();
+  const planet = data.neptune;
+  makeFact(planet);
   createBox(p);
 });
 
@@ -218,4 +254,34 @@ function createBox(p) {
   `;
   document.getElementById("js-p-box").innerHTML = html;
   console.log(html);
+}
+
+// HARDWARE
+
+// function sendPlanetToESP32(planetName) {
+//   // Replace with your ESP32 IP address on your local Wi-Fi network
+//   const esp32IP = "http://192.168.x.x";
+
+//   fetch(`${esp32IP}/setPlanet?name=${planetName}`)
+//     .then((response) => response.text())
+//     .then((data) => {
+//       console.log("ESP32 response:", data);
+//       // You can update your webpage UI here with confirmation
+//       alert(data);
+//     })
+//     .catch((error) => {
+//       console.error("Error communicating with ESP32:", error);
+//       alert("Failed to send planet data to ESP32");
+//     });
+// }
+
+// fetchTemperature();
+
+//  FUN FACT
+
+function makeFact(planet) {
+  const randomIndex = Math.floor(Math.random() * planet.length);
+  const randomFact = planet[randomIndex];
+  console.log("Random Earth fun fact:", randomFact);
+  document.getElementById("js-fun-fact").innerHTML = randomFact;
 }
